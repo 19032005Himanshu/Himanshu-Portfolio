@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu-Developer Portfolio</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Global styles */
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f64c72;
+        }
+
+        nav .right ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav .right ul li a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav .right ul li a:hover {
+            color: #f64c72;
+        }
+
+        /* Hero section */
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem 2rem;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+        }
+
+        .leftSection {
+            flex: 1;
+            max-width: 600px;
+            font-size: 1.7rem;
+        }
+
+        .leftSection .purple {
+            color: #c77dff;
+            font-weight: bold;
+        }
+
+        #element {
+            color: #00f5d4;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+        }
+
+        .buttons {
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            background-color: #f64c72;
+            color: white;
+            padding: 0.8rem 1.4rem;
+            border: none;
+            border-radius: 30px;
+            margin-right: 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff85a2;
+        }
+
+        .rightSection img {
+            width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 255, 200, 0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 2rem;
+        }
+
+        section h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #00f5d4;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        section li {
+            margin: 0.6rem 0;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Projects */
+        .project {
+            background-color: #1e1e1e;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+        }
+
+        .project h2 {
+            font-size: 1.3rem;
+            color: #fca311;
+        }
+
+        .project p li {
+            margin-left: 1.5rem;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+        }
+
+        form input,
+        form textarea {
+            padding: 0.8rem;
+            background-color: #1a1a1a;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        form button {
+            align-self: flex-start;
+            background-color: #f64c72;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #ff85a2;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121212;
+            color: #ccc;
+            padding: 2rem 1rem;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        .footer div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer ul li {
+            margin: 0.5rem 0;
+        }
+
+        .footer a {
+            color: #c77dff;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+
+        .footer-rights {
+            text-align: center;
+            padding-top: 1rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .firstSection {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .rightSection img {
+                margin-bottom: 2rem;
+            }
+
+            nav .right ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Himanshu Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Himanshu Sharma</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="Himanshu Resume link.pdf" target="_blank">
+                        <button class="btn">Download Resume</button>
+                    </a>
+                    <a href="https://github.com/19032005Himanshu" target="_blank">
+                        <button class="btn">Visit GitHub</button>
+                    </a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="c1.png" alt="Developer Image">
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h1>About Me</h1>
+            <li>
+                I'm Himanshu, a CSE undergraduate student and a Web-Developer with a growing curosity in Data Analytics.
+            </li>
+
+            <li>
+                Apart from coding, I have intrest in Content-Creation.
+            </li>
+
+            <li>
+                Proficient in Python, C++, SQL and Power BI.
+            </li>
+
+            <li>
+                Proven ability to work in cross-functional team environment and deliver data-driven insights through
+                real-world projects.
+            </li>
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <h1>Skills</h1>
+
+            <li>Web Development</li>
+            <li>Data Analytics</li>
+            <li>Python</li>
+            <li>Power BI</li>
+            <li>SQL</li>
+            <li>C++</li>
+            <li>Data Structures & Algorithms (DSA)</li>
+            <li>Content Creation</li>
+
+        </section>
+
+        <hr>
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="project">
+                <h2>1. Workforce Insights: A Data-Driven Approach to Job Openings and Market Trends. <a
+                        href="https://github.com/19032005Himanshu/Dashboard-on-ds-job-openings.git" target="_blank">
+                        <button class="btn">Click here to see</button>
+                    </a></h2>
+                <p>
+                    <li>Collected and cleaned job market data from online sources</li>
+                    <li>Built interactive dashboard in Power BI</li>
+                    <li>Identified hiring trends and key market insights</li>
+                </p>
+            </div>
+            <div class="project">
+                <h2>2.Portfolio Website</h2>
+                <p></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="first"><strong style="font-size: 20px;
+                color:#fca311">Himanshu's Portfolio</strong></div>
+            <div class="second">
+                <ul>
+                    <li>📍 Jaipur, India</li>
+                    <li>📞 +91-9660744350</li>
+                    <li>📧 himanshu67554@email.com</li>
+                </ul>
+            </div>
+            <div class="third">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/himanshu-sharma-2299062a2/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li><a href="https://github.com/19032005Himanshu" target="_blank">GitHub</a></li>
+                    <li><a href="himanshu67554@gmail.com">Email Me</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; himanshuportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Front-End Developer', 'Content Creator', 'Data Analyst.'],
+            typeSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
